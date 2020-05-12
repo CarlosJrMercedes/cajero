@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <title>Cajero</title>
+</head>
+<body>
+    <p class="text-center text-lg text-4xl">Welcome to OsitoBank</p>
+    <br>
+    <img src="resources/img/log.png" alt="" class="h-40 w-full object-contain">
+    <div class="w-full max-w-lg" id="firts">
+        <label for="guessField" class="font-bold mx-20">Card Number : </label><br>
+        <input type="text" id="numberField" class="mx-20 guessField bg-white focus:outline-none focus:shadow-outline border border-gray-500 rounded-lg w-full px-3 py-3 appearance-none leading-normal">    
+        <br><br>
+        <label for="guessField" class="font-bold mx-20">Card Password : </label><br>
+        <input type="password" id="passwordField" class="mx-20 guessField bg-white focus:outline-none focus:shadow-outline border border-gray-500 rounded-lg w-full px-3 py-3 appearance-none leading-normal">
+        <br><br>
+        <button id="send" class="mx-20 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            VALIDATE
+          </button>
+    </div>
+    <div id="second" hidden>
+        <p class="text-center text-lg text-4xl">HOW MUCH MONEY WILL YOU WITHDRAW?</p>
+            <div class="w-full max-w-lg">
+            <br><br>
+            <label for="guessField" class="font-bold mx-20">QUANTITY : </label><br>
+            <input type="text" id="quantityField" class="mx-20 guessField bg-white focus:outline-none focus:shadow-outline border border-gray-500 rounded-lg w-full px-3 py-3 appearance-none leading-normal">    
+            <br><br>
+            <div class="mx-20 w-full">
+                <button id="secondSend" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                    REMIT TRANSACTION
+                </button>
+                <label for="" class="text-sm result">CURRENT BALANCE : <b>$100.00</b></label>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+<script src="resources/src/js/jquery.min.js"></script>
+<script src="resources/src/js/sweetalert2.all.min.js"></script>
+<script src="resources/js/cajero.js"></script>
+</html>
