@@ -88,6 +88,8 @@
         $("#passwordField").val("");
         $("#firts").attr("hidden",false);
         $("#second").attr("hidden",true);
+        $("#quantityField").val("");
+
 
 
     });
