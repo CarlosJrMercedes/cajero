@@ -27,14 +27,18 @@
             <div class="w-full max-w-lg">
             <br><br>
             <label for="guessField" class="font-bold mx-20">QUANTITY : </label><br>
-            <input type="text" id="quantityField" class="mx-20 guessField bg-white focus:outline-none focus:shadow-outline border border-gray-500 rounded-lg w-full px-3 py-3 appearance-none leading-normal">    
+            <input type="text" id="quantityField" class="quantiyClass mx-20 guessField bg-white focus:outline-none focus:shadow-outline border border-gray-500 rounded-lg w-full px-3 py-3 appearance-none leading-normal">    
+            <input type="hidden" value="100" readonly id="balance">
             <br><br>
             <div class="mx-20 w-full">
                 <button id="secondSend" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                     REMIT TRANSACTION
                 </button>
-                <label for="" class="text-sm result">CURRENT BALANCE : <b>$100.00</b></label>
+                <button id="cancel" class="bg-red-600 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
+                    CANCEL
+                </button>
             </div>
+            <label for="" class="text-sm result mx-20">CURRENT BALANCE : <b>$100.00</b></label>
         </div>
     </div>
 

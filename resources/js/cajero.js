@@ -1,12 +1,14 @@
 
 
     $(document).on("click","#send",function(){
+        const quantiyClass = document.querySelector(".quantiyClass");
         var numberField = $("#numberField").val();
         var passwordField = $("#passwordField").val();
         if(numberField.trim() != "" && passwordField.trim() != ""){
 
             $("#firts").attr("hidden",true);
             $("#second").attr("hidden",false);
+            quantiyClass.focus();
 
         }else{
 
@@ -16,12 +18,13 @@
     });
 
     $(document).on("click","#secondSend",function(){
-        var money = 100;
+        var money = parseInt($("#balance").val());
         var quantityField = $("#quantityField").val();
-        // Swal.fire("Hola",money,"info");
+
         var saldo= $("#cant").val();
         if(quantityField.trim() != ""){
-            const textCont = document.querySelector(".result");
+        const quantiyClass = document.querySelector(".quantiyClass");
+        const textCont = document.querySelector(".result");
             if(quantityField.trim() > 0 && quantityField.trim() <= money){
                 Swal.fire({
                     title: 'ARE YOU SURE TO WITHDRAW THAT MONEY',
@@ -38,10 +41,17 @@
                         'success'
                       );
 
-                        $("#currentBalance").attr("hidden", true);
+                    $("#currentBalance").attr("hidden", true);
                     money = money - quantityField;
-                    textCont.textContent = "CURRENT BALANCE : $ "+money;
-                    }
+                    textCont.innerHTML = "CURRENT BALANCE : $ <b>"+money+"</b>";
+                    $("#balance").val(money);
+                    $("#quantityField").val("");
+                    quantiyClass.focus();
+
+
+
+                    };
+
                   });
 
             }else{
@@ -66,3 +76,20 @@
 
 
     });
+
+
+    $(document).on("click","#cancel",function(){
+        const textCont = document.querySelector(".result");
+        var texto = "CURRENT BALANCE : <b>$100.00</b>";
+        textCont.innerHTML = texto;
+
+        $("#balance").val("100");
+        $("#numberField").val("");
+        $("#passwordField").val("");
+        $("#firts").attr("hidden",false);
+        $("#second").attr("hidden",true);
+
+
+    });
+
+
